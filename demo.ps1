@@ -54,7 +54,7 @@ $bicepConfig
 $bicepConfig | ConvertTo-Json -Depth 5 |  Out-File ".\BicepFiles\Modular_BicepRegistry\bicepConfig.json"
 
 # APP1
-New-AzResourceGroupDeployment -Name "Modular-Local-Deployment-APP1" `
+New-AzResourceGroupDeployment -Name "Modular-BicepRegistry-Deployment-APP1" `
     -ResourceGroupName $rg.ResourceGroupName `
     -TemplateFile ".\BicepFiles\Modular_BicepRegistry\APP1-main.bicep" `
     -TemplateParameterFile ".\BicepFiles\Modular_BicepRegistry\APP1-main.parameters.json"
