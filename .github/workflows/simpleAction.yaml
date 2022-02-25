@@ -41,6 +41,7 @@ jobs:
         bicep restore ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
         bicep build ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
 
+
     # # Deploy ARM template -- with az cli
     # - name: Deploy template
     #   run: |
