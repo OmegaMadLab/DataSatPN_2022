@@ -9,12 +9,12 @@
             "value": "datasatpn2022-omegamadlab"
         },
         "createNewServer": {
-            "value": false
+            "value": true
         },
         "allowedPublicIpAddresses": {
             "value": "8.8.8.8,8.8.4.4" 
         },
-        "allowedAzSvcs": {
+        "enableAzSvcs": {
             "value": true 
         },
         "administratorLogin": {

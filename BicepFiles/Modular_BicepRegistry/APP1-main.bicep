@@ -6,7 +6,8 @@ param administratorLogin string
 @secure()
 param administratorLoginPassword string
 
-module newSqlSrv 'sqlSrv-module.bicep' = if (createNewServer) {
+// bicep registry pattern 'br:<acr_uri>/<path>/<module_name>:<tag>'
+module newSqlSrv 'br/DataSatPN:sqlsrv-module:v1' = if (createNewServer) {
   name: sqlServerName
   params: {
     sqlServerName: sqlServerName
@@ -23,7 +24,7 @@ resource sqlSrv 'Microsoft.Sql/servers@2014-04-01' existing = {
 param allowedPublicIpAddresses string
 param enableAzSvcs bool
 
-module fwRulesModule 'sqlSrv-fwRule-module.bicep' = {
+module fwRulesModule 'br/DataSatPN:sqlsrv-fwrule-module:v1' = {
   name: 'fwRules'
   params: {
     allowedPublicIpAddresses: allowedPublicIpAddresses
@@ -42,13 +43,13 @@ param environment string
 param databaseName string
 param collation string = 'SQL_Latin1_General_CP1_CI_AS'
 
-resource db 'Microsoft.Sql/servers/databases@2019-06-01-preview' = {
-  name: '${sqlSrv.name}/${databaseName}'
-  location: location
-  sku: {
-    name: environment == 'TEST' ? 'S0' : 'S3'
-  }
-  properties:{
+module database 'br/DataSatPN:db-module:v1' = {
+  name: databaseName
+  params: {
+    databaseName: databaseName
     collation: collation
+    environment: environment
+    location: location
+    sqlServerName: sqlSrv.name
   }
 }
