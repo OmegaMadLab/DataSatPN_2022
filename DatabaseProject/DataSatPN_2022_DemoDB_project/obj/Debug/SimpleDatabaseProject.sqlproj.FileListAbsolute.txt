@@ -1,0 +1,10 @@
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\bin\Debug\SimpleDatabaseProject.dacpac
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\bin\Debug\SimpleDatabaseProject.dll
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\bin\Debug\SimpleDatabaseProject.pdb
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\obj\Debug\SimpleDatabaseProject.sqlprojAssemblyReference.cache
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\obj\Debug\Model.xml
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\obj\Debug\refactor.xml
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\obj\Debug\postdeploy.sql
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\obj\Debug\predeploy.sql
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\obj\Debug\SimpleDatabaseProject.dll
+c:\GitRepos\DataSatPN_2022\DataSatPN_2022\DatabaseProject\SimpleDatabaseProject\obj\Debug\SimpleDatabaseProject.pdb

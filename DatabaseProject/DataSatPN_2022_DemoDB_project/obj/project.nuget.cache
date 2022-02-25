@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "rwqp4VraYrpnt0ZTy/TV+ejtUshHWX+5Nu7DMMhbVcmYR0jn/THJY32+Q2/pyEuNvZFyeo1NLkea2e2TzUfnMw==",
+  "success": true,
+  "projectFilePath": "c:\\GitRepos\\DataSatPN_2022\\DataSatPN_2022\\DatabaseProject\\DataSatPN_2022_DemoDB_project\\DataSatPN_2022_DemoDB.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\m.obinu\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\m.obinu\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.0\\microsoft.netframework.referenceassemblies.net46.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
