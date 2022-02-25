@@ -29,3 +29,6 @@ New-AzResourceGroupDeployment -Name "Modular-Local-Deployment-APP2" `
     -ResourceGroupName $rg.ResourceGroupName `
     -TemplateFile ".\BicepFiles\Modular\APP2-main.bicep" `
     -TemplateParameterFile ".\BicepFiles\Modular\APP2-main.parameters.json"
+
+# Cleanup
+Get-AzResource -ResourceGroupName $rg.ResourceGroupName | Remove-AzResource -force
