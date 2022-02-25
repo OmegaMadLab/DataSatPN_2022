@@ -59,6 +59,11 @@ $servicePrincipal = New-AzADServicePrincipal `
     -Role "Contributor" `
     -Scope $devRg.ResourceId
 
+# Assign also the Contributor role on the RG hosting the bicep registry
+New-AzRoleAssignment -ApplicationId $servicePrincipal.AppId `
+    -ResourceGroupName $bcRg.ResourceGroupName `
+    -RoleDefinitionName "Contributor"
+
 # Assign also the Deployment validator role on PROD RG
 New-AzRoleAssignment -ApplicationId $servicePrincipal.AppId `
     -ResourceGroupName $prodRg.ResourceGroupName `
@@ -80,6 +85,11 @@ $servicePrincipal = New-AzADServicePrincipal `
     -DisplayName "DataSatPN-2022-PROD" `
     -Role "Contributor" `
     -Scope $prodRg.ResourceId
+
+# Assign also the Contributor role on the RG hosting the bicep registry
+New-AzRoleAssignment -ApplicationId $servicePrincipal.AppId `
+    -ResourceGroupName $bcRg.ResourceGroupName `
+    -RoleDefinitionName "Contributor"
 
 $output = @{
    clientId = $($servicePrincipal.AppId)

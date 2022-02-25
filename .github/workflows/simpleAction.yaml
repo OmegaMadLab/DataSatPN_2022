@@ -26,26 +26,26 @@ jobs:
         creds: ${{ secrets.AZCRED_DEV }}
     
     # Deploy template -- with marketplace action
-    # - name: Deploy template
-    #   uses: azure/arm-deploy@v1
-    #   with:
-    #     deploymentName: ${{ github.run_number }}
-    #     resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
-    #     template: ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
-    #     parameters: ./BicepFiles/Modular_BicepRegistry/APP1-main.parameters.json
+    - name: Deploy template
+      uses: azure/arm-deploy@v1
+      with:
+        deploymentName: ${{ github.run_number }}
+        resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
+        template: ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
+        parameters: ./BicepFiles/Modular_BicepRegistry/APP1-main.parameters.json
 
     # Build bicep file
-    - name: Bicep build
-      run:  |
-        az bicep upgrade
-        bicep restore ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
-        bicep build ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
+    # - name: Bicep build
+    #   run:  |
+    #     az bicep upgrade
+    #     bicep restore ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
+    #     bicep build ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
 
-    # Deploy ARM template -- with az cli
-    - name: Deploy template
-      run: |
-        az deployment group create \
-          --name 'simpleAction' \
-          --resource-group '${{ env.AZURE_RESOURCEGROUP_NAME }}' \
-          --template-file './BicepFiles/Modular_BicepRegistry/APP1-main.json' \
-          --parameters @./BicepFiles/Modular_BicepRegistry/APP1-main.parameters.json
+    # # Deploy ARM template -- with az cli
+    # - name: Deploy template
+    #   run: |
+    #     az deployment group create \
+    #       --name 'simpleAction' \
+    #       --resource-group '${{ env.AZURE_RESOURCEGROUP_NAME }}' \
+    #       --template-file './BicepFiles/Modular_BicepRegistry/APP1-main.json' \
+    #       --parameters @./BicepFiles/Modular_BicepRegistry/APP1-main.parameters.json
