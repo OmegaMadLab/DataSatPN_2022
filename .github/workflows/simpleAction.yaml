@@ -34,7 +34,7 @@ jobs:
     #     template: ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
     #     parameters: ./BicepFiles/Modular_BicepRegistry/APP1-main.parameters.json
 
-    Build bicep file
+    # Build bicep file
     - name: Bicep build
       run:  |
         az bicep upgrade
