@@ -56,8 +56,8 @@ $bicepConfig | ConvertTo-Json -Depth 5 |  Out-File ".\BicepFiles\Modular_BicepRe
 # APP1
 New-AzResourceGroupDeployment -Name "Modular-Local-Deployment-APP1" `
     -ResourceGroupName $rg.ResourceGroupName `
-    -TemplateFile ".\BicepFiles\Modular\APP1-main.bicep" `
-    -TemplateParameterFile ".\BicepFiles\Modular\APP1-main.parameters.json"
+    -TemplateFile ".\BicepFiles\Modular_BicepRegistry\APP1-main.bicep" `
+    -TemplateParameterFile ".\BicepFiles\Modular_BicepRegistry\APP1-main.parameters.json"
 
 # Cleanup
 Get-AzResource -ResourceGroupName $rg.ResourceGroupName | Remove-AzResource -force
