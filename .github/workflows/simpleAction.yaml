@@ -37,6 +37,7 @@ jobs:
     # Build bicep file
     - name: Bicep build
       run:  |
+        az bicep upgrade
         bicep restore ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
         bicep build ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
 
