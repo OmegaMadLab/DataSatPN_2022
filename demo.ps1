@@ -65,3 +65,16 @@ Get-AzResource -ResourceGroupName $rg.ResourceGroupName | Remove-AzResource -for
 #endregion
 
 #endregion
+
+#region Template Spec
+
+# Create a template spec for APP1-main.bicep
+New-AzTemplateSpec -ResourceGroupName "DataSatPN_2022_Demo_BicepResources" `
+                -Name "APP1" `
+                -Version "v1.0" `
+                -Description "APP1 Template" `
+                -DisplayName "APP1" `
+                -Location "Sweden Central" `
+                -TemplateFile ".\BicepFiles\Modular_BicepRegistry\APP1-main.bicep"
+
+#endregion
