@@ -11,12 +11,6 @@
         "createNewServer": {
             "value": false
         },
-        "allowedPublicIpAddresses": {
-            "value": "8.8.8.8,8.8.4.4,1.1.1.1,2.2.2.2" 
-        },
-        "enableAzSvcs": {
-            "value": true 
-        },
         "administratorLogin": {
             "value": "omegamadlab" 
         },

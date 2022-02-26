@@ -20,18 +20,6 @@ resource sqlSrv 'Microsoft.Sql/servers@2014-04-01' existing = {
   name: newSqlSrv.name
 }
 
-param allowedPublicIpAddresses string
-param enableAzSvcs bool
-
-module fwRulesModule 'modules/sqlSrv-fwRule-module.bicep' = {
-  name: 'fwRules'
-  params: {
-    allowedPublicIpAddresses: allowedPublicIpAddresses
-    sqlServerName: sqlSrv.name
-    enableAzSvcs:  enableAzSvcs
-  }
-}
-
 @allowed([
   'TEST'
   'PROD'
