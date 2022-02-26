@@ -39,7 +39,7 @@ jobs:
       run:  |
         az bicep upgrade
         bicep restore ./BicepFiles/Modular_BicepRegistry/APP1-main-noAlias.bicep
-        bicep build ./BicepFiles/Modular_BicepRegistry/APP1-main.bicep
+        bicep build ./BicepFiles/Modular_BicepRegistry/APP1-main-noAlias.bicep
 
 
     # # Deploy ARM template -- with az cli
