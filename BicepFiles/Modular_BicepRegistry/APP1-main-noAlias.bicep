@@ -6,7 +6,7 @@ param administratorLogin string
 @secure()
 param administratorLoginPassword string
 
-// bicep registry pattern 'br:<acr_uri>/<path>/<module_name>:<tag>'
+// Update the ACR uri according to your environment before deploying the bicep file
 module newSqlSrv 'br:acr84090.azurecr.io/modules/sqlsrv-module:v1' = if (createNewServer) {
   name: sqlServerName
   params: {
@@ -24,6 +24,7 @@ resource sqlSrv 'Microsoft.Sql/servers@2014-04-01' existing = {
 param allowedPublicIpAddresses string
 param enableAzSvcs bool
 
+// Update the ACR uri according to your environment before deploying the bicep file
 module fwRulesModule 'br:acr84090.azurecr.io/modules/sqlsrv-fwrule-module:v1' = {
   name: 'fwRules'
   params: {
@@ -43,6 +44,7 @@ param environment string
 param databaseName string
 param collation string = 'SQL_Latin1_General_CP1_CI_AS'
 
+// Update the ACR uri according to your environment before deploying the bicep file
 module database 'br:acr84090.azurecr.io/modules/db-module:v1' = {
   name: databaseName
   params: {
