@@ -125,4 +125,4 @@ jobs:
         deploymentName: ${{ github.run_number }}
         resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME_PROD }}
         template: ${{ env.BICEP_FILE}}
-        parameters: ${{ env.PARAMETER_FILE_DEV }}
+        parameters: ${{ env.PARAMETER_FILE_PROD }}
